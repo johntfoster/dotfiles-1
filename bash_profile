@@ -3,7 +3,9 @@ echo -e "Kernel Information: " `uname -smr`
 echo -e "`bash --version`"
 echo -ne "Uptime: "; uptime
 echo -ne "Server time is: "; date
-if [ -a $HOME/.bashrc ] then
-	source $HOME/.bash_profile
+
+if [ -e $HOME/.bashrc ]; then
+    source $HOME/.bashrc
 fi
+
 set -o vi
